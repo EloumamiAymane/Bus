@@ -1,0 +1,181 @@
+<div class="col">
+  <div class="card flex-fill ">
+    <div class="card-header">
+
+      <h5 class="card-title mb-0">Bus Movement</h5>
+    </div>
+    <div class="card-body">
+
+      <select class="form-select mb-3" style="width: 30%;margin: auto;">
+        <option selected>Choose Your Bus</option>
+        <option>Bus 01</option>
+        <option>Bus 02</option>
+        <option>Bus 03</option>
+      </select>
+
+      <div class="container">
+        <div class="subcontainer mt-5" style="display: flex;justify-content: space-around;">
+          <div class="items">
+            Bus 01
+          </div>
+          <div class="items">
+            <i class="fas fa-circle text-green" style="color:green" title="start" data-toggle="tooltip"></i>
+
+          </div>
+          <div class="items">
+
+            <a onclick="handle()" class="view" title="details du mouvement" data-toggle="tooltip"><i
+                class="material-icons">&#xE417;</i></a>
+          </div>
+        </div>
+        <div class=" mt-2" id="dropdown">
+
+          <div class="card-body" style="box-shadow: none;">
+
+
+
+            <div class="row" style="justify-content: space-evenly;">
+              <div class="col-sm-12 col-md-6 col-lg-3  "
+                style="height: 100px; width: 100px;border-radius: 180px; background-color: orange;" class="view"
+                title="progression du bus" data-toggle="tooltip">
+                <p style="text-align: center;margin-top:30px;">100%</p>
+                <img src="assets/img/busi.png" height="30" width="30"
+                  style="position: relative;left:20px;bottom: 10px;">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3   "
+                style="height: 100px; width: 100px;border-radius: 180px; background-color: gainsboro;"
+                title="distance restantée" data-toggle="tooltip">
+
+                <p style="text-align: center;margin-top:30px;">20 km</p>
+                <img src="assets/img/busstart.png" height="30" width="30"
+                  style="position: relative;left:20px;bottom: 10px;">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3   "
+                style="height: 100px; width: 100px;border-radius: 180px; background-color: orange;"
+                title="Etudiant a récuperer" data-toggle="tooltip">
+                <p style="text-align: center;margin-top:8px;">219 Etudiants
+                </p>
+                <img src="assets/img/house.png" height="25" width="25"
+                  style="position: relative;left:26px;bottom: 10px;">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3   "
+                style="height: 100px; width: 100px;border-radius: 180px; background-color: rgb(222, 216, 216);"
+                title="Etudiant récuperer" data-toggle="tooltip">
+                <p style="text-align: center;margin-top:11px;">10 Etudiants
+                </p>
+                <img src="assets/img/school.png" height="25" width="25"
+                  style="position: relative;left:26px;bottom: 20px;">
+              </div>
+            </div>
+            <div class="container">
+              <h4 class="mt-5"><i class="fa-solid fa-circle-info" style="font-size: 20px;"></i> Informations
+                d'une tournée</h4>
+            </div>
+
+            <div class="row  " style="position: relative;">
+              <div class="col-5 mt-4"> <img src="assets/img/driver.png" height="30" width="30"
+                  style="position: relative;;bottom: 4px;">
+                Chauffeur: <span>A.ELOUMAMI</span>
+              </div>
+              <div class="col mt-4" title="Heure estimée" data-toggle="tooltip">
+                <i class="fa-regular fa-clock" style="font-size: 24px;;"></i>
+                <span style="position: relative;bottom: 4px;">
+                  8:30 --- 9:30
+                </span>
+              </div>
+              <div class="col mt-4" title="Heure démarrage" data-toggle="tooltip">
+                <i class="fa-regular fa-clock" style="font-size: 24px;;"></i>
+                <span style="position: relative;bottom: 4px;">
+                  8:40 --- 9:58
+                </span>
+              </div>
+              <div class="col mt-4" title="retard de 5 min" data-toggle="tooltip">
+
+                <span style="position: relative;bottom: 4px;">
+                  <span class="badge rounded-pill text-bg-danger">5 min de
+                    retard</span>
+                </span>
+              </div>
+
+            </div>
+
+            <div class="container">
+              <h4 class="mt-5"><i class="fa-solid fa-circle-info" style="font-size: 20px;"></i> Informations
+                Etudiants</h4>
+            </div>
+            <div class="row mt-4" style="justify-content:center">
+              <div class="col-sm-12 col-md-6 col-lg-3 ">
+                <p>Etudiants présents <i class="fas fa-circle text-green" style="color:green" title="start"
+                    data-toggle="tooltip"></i>
+                </p>
+
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3 ">
+                <p>Etudiants absents <i class="fas fa-circle text-green" style="color:red" title="start"
+                    data-toggle="tooltip"></i>
+                </p>
+
+
+              </div>
+
+            </div>
+            <div class="row mt-4" style="justify-content: space-around;">
+
+              <div class="col-sm-12 col-md-6 col-lg-3 "
+                style="height: 150px; width: 150px;border-radius: 180px;border: 1px solid rgb(21, 118, 21)"
+                title="Etudiant présents" data-toggle="tooltip">
+                <p style="position: relative;top:60px;left:20px">12 Etudiants
+                </p>
+
+              </div>
+
+
+              <div class="col-sm-12 col-md-6 col-lg-3 "
+                style="height: 150px; width: 150px;border-radius: 180px;border: 1px solid rgb(215, 21, 21)"
+                title="Etudiant absents" data-toggle="tooltip">
+
+                <p style="position: relative;top:60px;left:20px">2 Etudiants
+              </div>
+            </div>
+          </div>
+
+          <div class="container" style="position: relative; left:3%">
+            <h4 class="mt-5"><i class="fa-sharp fa-regular fa-map" style="font-size: 22px;"></i> Bus
+              Map</h4>
+          </div>
+          <div class="container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.56000706578!2d-7.66939450982268!3d33.57240323277928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca!5e0!3m2!1sfr!2sma!4v1688845659741!5m2!1sfr!2sma"
+              width="100%" height="450" style="border:0;position: relative;right:0%" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="container" style="position: relative; left:3%">
+            <h4 class="mt-5"><i class="fa-sharp fa-regular fa-map" style="font-size: 22px;"></i> Bus
+              Capacity</h4>
+          </div>
+
+          <div class="col">
+
+
+            <div class="">
+              <div class="align-self-center w-100">
+                <div class="py-3">
+                  <div class="chart chart-sm" style="justify-content: center; margin-top:30px;">
+                    <canvas id="pie"></canvas>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
