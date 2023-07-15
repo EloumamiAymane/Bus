@@ -1,0 +1,18 @@
+< <div class="control-section">
+  <div class="trackball-control-section" align='center'>
+    <ejs-chart style='display:block;' [width]='width' id='chartcontainer2' [primaryXAxis]='primaryXAxis'
+      [primaryYAxis]='primaryYAxis' [title]='title' [tooltip]='tooltip' [legendSettings]='legend' (load)='load($event)'
+      (pointRender)='pointRender($event)'>
+      <e-series-collection>
+        <e-series [dataSource]='data' [minRadius]='minRadius' [maxRadius]='maxRadius' type='Bubble' xName='distance'
+          yName='time' size='BubbleSize' name='Pound' [marker]='marker' tooltipMappingName='Text' [border]='border'>
+        </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
+  </div>
+  <style>
+    .trackball-control-section ellipse[id*=_Trackball_0] {
+      stroke-width: 1 !important;
+    }
+  </style>

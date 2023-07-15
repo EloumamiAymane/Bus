@@ -1,0 +1,24 @@
+<div class="control-section">
+  <div align="center">
+    <ejs-chart style="display:block;" [chartArea]="chartArea" [width]="width" align="center" id="chartcontainer"
+      [primaryXAxis]="primaryXAxis" [primaryYAxis]="primaryYAxis" [title]="title" [tooltip]="tooltip"
+      (load)="load($event)" [enableSideBySidePlacement]="placement" [legendSettings]="{ position: legendPosition }">
+      <e-series-collection>
+        <e-series [dataSource]="data" type="Column" xName="ConsumerName" yName="TotalCount" name="Total" width="3"
+          [marker]="marker" columnWidth="0.5">
+        </e-series>
+        <e-series [dataSource]="data" type="Column" xName="ConsumerName" yName="Presents" name="Presents" width="3"
+          [marker]="marker" columnWidth="0.4">
+        </e-series>
+        <e-series [dataSource]="data" type="Column" xName="ConsumerName" yName="Absents" name="Absents" width="3"
+          [marker]="marker" columnWidth="0.3">
+        </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
+</div>
+<style>
+  .control-section {
+    min-height: 450px;
+  }
+</style>

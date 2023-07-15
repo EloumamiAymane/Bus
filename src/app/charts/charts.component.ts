@@ -1,34 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { ChartTheme, ILoadedEventArgs } from '@syncfusion/ej2-angular-charts';
 import { Chart, registerables } from 'node_modules/chart.js';
+import { Browser } from '@syncfusion/ej2-base';
 Chart.register(...registerables)
 @Component({
-  selector: 'app-bus-details',
-  templateUrl: './bus-details.component.html',
-  styleUrls: ['./bus-details.component.css']
+  selector: 'app-charts',
+  templateUrl: './charts.component.html',
+  styleUrls: ['./charts.component.css']
 })
-export class BusDetailsComponent implements OnInit {
+export class ChartsComponent implements OnInit, AfterViewInit {
+
 
   constructor() { }
 
+
   ngOnInit(): void {
 
-    // Pie chart
-    this.PieChart()
-
-
   }
-  PieChart() {
-    const ctx = document.getElementById('pie') as HTMLCanvasElement;
-    const chart = new Chart(ctx, {
+
+
+
+
+
+  lotsOfTabs = new Array(3).fill(0).map((_, index) => `Tab ${index}`);
+  ngAfterViewInit() {
+
+    const ctx1 = document.getElementById('piy1') as HTMLCanvasElement;
+    const chart1 = new Chart(ctx1, {
       type: 'pie',
       data: {
-        labels: ['Place disponible', 'Place remplies'],
+        labels: ['Place disponible', 'Place remplies', 'none'],
         datasets: [
           {
-            data: [8, 22],
+            data: [8, 22, 0],
             backgroundColor: [
-              'rgb(128, 128, 128)',
-              'rgb(0, 128,  0)',
+              ' rgba(255, 255, 0, 1)',
+              'rgba(255, 165, 0, 0.8)',
+              'rgba(128, 128, 128, 0.5)',
             ],
             borderWidth: 5
           }
@@ -57,5 +66,6 @@ export class BusDetailsComponent implements OnInit {
       }
     });
   }
+
 
 }

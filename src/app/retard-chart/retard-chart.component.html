@@ -1,0 +1,27 @@
+<div class="control-section">
+  <div align="center">
+    <ejs-chart style="display:block;" [chartArea]="chartArea" [width]="width" align="center" id="chartcontainer1"
+      [primaryXAxis]="primaryXAxis" [primaryYAxis]="primaryYAxis" [title]="title" [tooltip]="tooltip"
+      (load)="load($event)" [legendSettings]="legend">
+      <e-series-collection>
+        <e-series [dataSource]="data" fill='#CD0404' type="StackingBar" xName="Month" yName="retardI"
+          name="retard Important" width="2" columnWidth="0.6" [border]="border">
+        </e-series>
+        <e-series [dataSource]="data" fill='orange' type="StackingBar" xName="Month" yName="retardW"
+          name="retard intermediare " width="2" columnWidth="0.6" [border]="border">
+        </e-series>
+        <e-series [dataSource]="data" fill='green' type="StackingBar" xName="Month" yName="retardA"
+          name="retard Aceptable" width="2" columnWidth="0.6" [border]="border">
+        </e-series>
+        <e-series [dataSource]="data" fill="#78C1F3" type="StackingBar" xName="Month" yName="tot" name="tot" width="2"
+          columnWidth="0.6" [border]="border">
+        </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
+</div>
+<style>
+  .control-section {
+    min-height: 450px;
+  }
+</style>
